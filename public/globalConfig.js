@@ -1,4 +1,4 @@
-﻿const HOST_IND = 3, // 切换服务器
+﻿const HOST_IND = 4, // 切换服务器
     HOST = [
         "http://www.chineseo2o.com/", // 正式服务器
         "http://172.16.159.110:8080/", // 测试服务器
@@ -6,6 +6,8 @@
         "http://192.168.0.186:8080/", // 其它测试
 
         "http://172.16.159.110:8080/",
+        
+        "http://www.chineseo2o.com/saas/",
         "/" // 代理
     ],
     HOST_CATALOG_API = "api/", // api目录

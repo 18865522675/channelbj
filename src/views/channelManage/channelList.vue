@@ -203,7 +203,7 @@
               loginName:""
           },
           loading:false,
-          tableData: [],
+          tableData: [{}],
           addDialogVisible: false,
           isAdd: false,
           ruleForm: {},
@@ -240,7 +240,7 @@
         };
       },
       mounted() {
-          this.getList();
+//        this.getList();	
           this.drawLine();
       },
         components:{
@@ -257,7 +257,7 @@
           showDialog(row){
               this.actionRow={...row};
               this.dialogVisible=true;
-              this.getMenberList()
+//            this.getMenberList()
           },
           getMenberList(){
               this.$api.channel.channelList_memberList({
@@ -373,19 +373,28 @@
         font-size: 14px;
     }
     @keyframes dialog-fade-in {
-        0% {
-            transform: translate3d(100%, 0, 0);
-            opacity: 0;
-        }
-        100% {
-            transform: translate3d(50%, 0, 0);
-            opacity: 1;
-        }
+        /*0% {
+		    transform: translate3d(0, 100%, 0);
+		    opacity: 0;
+		  }
+		  100% {
+		    transform: translate3d(0, 0, 0);
+		    opacity: 1;
+		  }*/
+		  
+		   0% {
+		    transform: translate3d(100%, 0, 0);
+		    opacity: 0;
+		  }
+		  100% {
+		    transform: translate3d(0%, 0, 0);
+		    opacity: 1;
+		  }
     }
 
     @keyframes dialog-fade-out {
         0% {
-            transform: translate3d(50%, 0, 0);
+            transform: translate3d(0%, 0, 0);
             opacity: 1;
         }
         100% {
@@ -396,11 +405,16 @@
     .memberDialog{
         /*margin:0 25%;*/
         overflow: hidden;
+        /*text-align: right;*/
+        /*display: flex;
+        justify-content: flex-end;*/
         .el-dialog{
+        	
+        	float: right;
             height: calc( 100% - 71px);
             margin: 0!important;
-            z-index:1000000;
-            /*left: 50%;*/
+            /*z-index:-1000000;*/
+            /*left: auto;*/
             /*margin: 0 50%!important;*/
             /*transition: all 10s;*/
             margin-top: 71px!important;
