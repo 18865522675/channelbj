@@ -1,0 +1,99 @@
+.cardBody{
+
+}
+.flexItem(@dir){
+  display: flex;
+  flex-direction: @dir;
+}
+.flex-r{
+  .flexItem(row)
+}
+.flex-c{
+  .flexItem(column)
+}
+.marL10{
+  margin-left: 10px!important;
+}
+.marL20{
+  margin-left: 20px;
+}
+.marL30{
+  margin-left: 30px ;
+}
+.cardTableWrap{
+  margin-top: 40px;
+}
+
+.cardTable{
+  .el-button{
+    span{
+      color:rgb(50, 64, 87)
+    }
+  }
+  thead{
+    th{
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+
+  tbody{
+    td{
+      height: 32px;
+      font-size: 12px;
+    }
+  }
+
+  .el-table__row{
+    td{
+      padding: 2px 0;
+      text-align: center;
+    }
+  }
+}
+
+.el-button--primary{
+  border-color:#324057
+}
+.pagiWrap{
+  margin-top: 50px;
+  text-align: center;
+}
+.el-pager li.active{
+   //color:#324057!importa
+}
+
+.cardHeader-searchInp {
+  .searchInpBody {
+    .el-input__inner {
+      height: 32px;
+    }
+  }
+}
+.cardTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+.searchBtn{
+  padding: 0 20px!important;
+  line-height: 31px!important;
+}
+@media screen and (max-width: 1400px) {
+ .memberPagi{
+    .el-pagination__sizes{
+      margin: 0;
+    }
+   .el-pagination__total{
+     margin: 0;
+   }
+   .btn-prev{
+     padding-right: 0!important;
+   }
+   .btn-next{
+     padding: 0!important;
+   }
+   .el-pagination__jump{
+     margin-left: 0;
+   }
+ }
+}
